@@ -1,6 +1,7 @@
 use field::PyField;
 use validators::{
-    PyDateTime, PyDateTimeFormat, PyEmpty, PyFloat, PyInteger, PyLiteral, PyText, PyUnique, PyDate, PyTime,
+    PyDate, PyDateTime, PyDateTimeFormat, PyEmpty, PyFloat, PyInteger, PyLiteral, PyText, PyTime,
+    PyUnique,
 };
 
 mod csv;

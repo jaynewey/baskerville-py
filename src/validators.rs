@@ -9,7 +9,7 @@ use baskerville_py_macro::IntoPy;
 pub use nullable::PyEmpty;
 pub use numeric::{PyFloat, PyInteger};
 pub use text::{PyLiteral, PyText};
-pub use time::{PyDate, PyTime, PyDateTime, PyDateTimeFormat};
+pub use time::{PyDate, PyDateTime, PyDateTimeFormat, PyTime};
 pub use unique::PyUnique;
 
 use pyo3::prelude::*;

@@ -1,6 +1,6 @@
 use crate::generate_py_wrapper;
 use baskerville::validators::time::DateTimeFormat;
-use baskerville::{Date, DateTime, Validator, Time};
+use baskerville::{Date, DateTime, Time, Validator};
 use pyo3::prelude::*;
 use pyo3::pyclass::CompareOp;
 
@@ -37,7 +37,7 @@ impl PyDate {
     )]
     pub fn new(formats: Option<Vec<String>>) -> Self {
         if let Some(formats) = formats {
-            Self(Date {formats})
+            Self(Date { formats })
         } else {
             Self(Date::default())
         }
@@ -93,7 +93,7 @@ impl PyTime {
     )]
     pub fn new(formats: Option<Vec<String>>) -> Self {
         if let Some(formats) = formats {
-            Self(Time {formats})
+            Self(Time { formats })
         } else {
             Self(Time::default())
         }
@@ -115,7 +115,6 @@ impl PyTime {
         self.0.validate(value)
     }
 }
-
 
 generate_py_wrapper! {
     DateTimeFormat, PyDateTimeFormat, "DateTimeFormat": Clone, PartialEq

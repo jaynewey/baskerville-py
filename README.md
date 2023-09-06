@@ -4,7 +4,7 @@ Infer and validate data-type schemas in Python.
 
 ## Example
 
-```csv
+```
 # mascots.csv
 Name,LOC,Species
 Ferris,42,Crab

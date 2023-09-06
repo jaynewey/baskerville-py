@@ -35,7 +35,7 @@ fn as_byte(value: &str) -> PyResult<u8> {
 /// Example:
 ///     .. admonition:: ``mascots.csv``
 ///
-///         .. code-block:: csv
+///         .. code-block::
 ///     
 ///             Name,LOC,Species
 ///             Ferris,42,Crab

@@ -71,6 +71,7 @@ docs/_build/
 # Pyenv
 .python-version
 
+Cargo.lock
 
 # NOTE: Remove VVV
 test.csv

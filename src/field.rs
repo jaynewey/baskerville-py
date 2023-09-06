@@ -13,7 +13,7 @@ generate_py_wrapper! {
 impl PyField {
     pub fn __repr__(&self) -> String {
         Python::with_gil(|py| {
-            let name = self.name().into_py(py).to_string();
+            let name = self.name().map_or("None".into(), |name| format!("'{name}'"));
             let valid_types = self
                 .valid_types()
                 .into_iter()

@@ -24,4 +24,6 @@ jobs:
           maturin build
           wheel_file=$(find target/wheels -name "*.whl")
           pip install "$wheel_file" 
+          git config --global user.name "github-actions"
+          git config --global user.email "action@github.com"
           mudkip build --check --update-gh-pages --repository https://x-access-token:${{ secrets.GH_TOKEN }}@github.com/jaynewey/baskerville_py

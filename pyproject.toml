@@ -26,6 +26,7 @@ project_dir = "src"
 [tool.mudkip.override]
 html_static_path = ["_static"]
 html_css_files = ["style.css"]
+suppress_warnings = ["myst.header"]
 
 [tool.mudkip.override.html_theme_options]
 sidebar_hide_name = true

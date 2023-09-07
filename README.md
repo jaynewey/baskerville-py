@@ -8,8 +8,8 @@
 ---
 
 [![PyPI - Version](https://img.shields.io/pypi/v/baskerville)](https://pypi.org/project/baskerville)
-[![docs](https://github.com/jaynewey/baskerville-py/actions/workflows/docs.yml/badge.svg)](https://jaynewey.github.com/baskerville-py)
-[![GitHub](https://img.shields.io/github/license/jaynewey/baskerville-py)](https://github.com/jaynewey/baskerville-py/LICENSE)
+[![docs](https://github.com/jaynewey/baskerville-py/actions/workflows/docs.yml/badge.svg)](https://jaynewey.github.io/baskerville-py)
+[![GitHub](https://img.shields.io/github/license/jaynewey/baskerville-py)](https://github.com/jaynewey/baskerville-py/blob/main/LICENSE)
 
 Infer and validate data-type schemas in Python.
 

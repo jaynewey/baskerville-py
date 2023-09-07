@@ -2,6 +2,17 @@
 
 
 
+## v0.1.0 (2023-09-07)
+
+### Breaking
+
+* ci!: fix PSR released check ([`f6fefca`](https://github.com/jaynewey/baskerville-py/commit/f6fefca0dc274ae4c3eee03953c5cab7eaef02ce))
+
+### Documentation
+
+* docs: fix broken links ([`0ce7ed4`](https://github.com/jaynewey/baskerville-py/commit/0ce7ed4dd7ee45561cd24c7d6a23f908ef5571c8))
+
+
 ## v0.0.1 (2023-09-07)
 
 ### Chore

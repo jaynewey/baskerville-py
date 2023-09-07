@@ -16,6 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       released: ${{ steps.psr.outputs.released }}
+      tag: ${{ steps.psr.outputs.tag }}
     concurrency: release
     permissions:
       id-token: write
@@ -41,6 +42,8 @@ jobs:
         target: [x86_64, x86, aarch64, armv7, s390x, ppc64le]
     steps:
       - uses: actions/checkout@v3
+        with:
+          ref: ${{ needs.semver.outputs.tag }}
       - uses: actions/setup-python@v4
         with:
           python-version: "3.10"

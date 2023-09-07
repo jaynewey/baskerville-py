@@ -9,7 +9,7 @@
     :caption: Project links
     :hidden:
 
-    GitHub repository <https://github.com/jaynewey/baskerville>
+    GitHub repository <https://github.com/jaynewey/baskerville-py>
     PyPI package <https://pypi.org/project/baskerville>
 
 |

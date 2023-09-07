@@ -15,6 +15,12 @@ Infer and validate data-type schemas in Python.
 
 </div>
 
+## Installation
+
+```
+pip install baskerville
+```
+
 ## Example
 
 ```
@@ -29,3 +35,11 @@ Corro,7,Urchin
 >>> baskerville.infer_csv("mascots.csv")
 [Field(name=Name, valid_types=[Text(min_length=5, max_length=6)], nullable=False), Field(name=LOC, valid_types=[Integer(min_value=7, max_value=42), Float(min_value=7, max_value=42), Text(min_length=1, max_length=2)], nullable=False), Field(name=Species, valid_types=[Text(min_length=4, max_length=6)], nullable=False)]
 ```
+
+## Contributing
+
+<!-- TODO: add "pre-commit checklist" when CI is set up -->
+
+### Versioning
+
+The repo bases versioning from [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/)

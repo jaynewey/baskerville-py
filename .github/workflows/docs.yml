@@ -30,12 +30,13 @@ jobs:
           wheel_file=$(find target/wheels -name "*.whl")
           pip install "$wheel_file"
 
-      - name: Build docs
+      - name: Build and test docs
         if: |
           github.event_name == 'pull_request'
           || github.ref == 'refs/heads/devel'
         run: |
           mudkip build --check
+          mudkip test
 
       - name: Build and publish docs
         if: |

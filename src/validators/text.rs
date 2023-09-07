@@ -12,7 +12,7 @@ generate_py_wrapper! {
     ///    >>> text = baskerville.Text()
     ///    >>> text.validate("42")
     ///    True
-    ///    >>> Text.validate("Ferris")
+    ///    >>> text.validate("Ferris")
     ///    True
     Text, PyText, "Text": Clone
 }

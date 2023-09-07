@@ -15,7 +15,7 @@ jobs:
   semver:
     runs-on: ubuntu-latest
     outputs:
-      released: ${{ steps.semver.outputs.released }}
+      released: ${{ steps.psr.outputs.released }}
     concurrency: release
     permissions:
       id-token: write
@@ -26,7 +26,8 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Python Semantic Release
+      - id: psr
+        name: Python Semantic Release
         uses: python-semantic-release/python-semantic-release@master
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}

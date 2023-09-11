@@ -9,7 +9,7 @@ crate-type = ["cdylib"]
 
 [dependencies]
 regex = "1.9.3"
-baskerville = { version = "0.1.0", features = ["python"] }
+baskerville = { version = "0.2.0", features = ["python"] }
 baskerville_py_macro = { path = "./baskerville_py_macro" }
 
 [dependencies.pyo3]

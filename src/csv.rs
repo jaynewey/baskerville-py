@@ -86,5 +86,5 @@ pub fn infer_csv_py(
     // TODO: more comprehensive error handling
     //       e.g: we might want to alert to try flexible=True
     .map_err(|e| PyException::new_err(e.to_string()))?;
-    Ok(fields.into_iter().map(PyField::from).collect())
+    Ok(fields.0.into_iter().map(PyField::from).collect())
 }

@@ -1,19 +1,21 @@
 use crate::macros::generate_py_wrapper;
-use baskerville::Field;
+use baskerville::{Field, Fields};
 use pyo3::prelude::*;
 
 use crate::validators::PyDataType;
 
 generate_py_wrapper! {
     /// Represents a field and its valid data types.
-    Field, PyField, "Field"
+    Field, PyField, "Field": Clone
 }
 
 #[pymethods]
 impl PyField {
     pub fn __repr__(&self) -> String {
         Python::with_gil(|py| {
-            let name = self.name().map_or("None".into(), |name| format!("'{name}'"));
+            let name = self
+                .name()
+                .map_or("None".into(), |name| format!("'{name}'"));
             let valid_types = self
                 .valid_types()
                 .into_iter()
@@ -51,4 +53,18 @@ impl PyField {
     fn nullable(&self) -> bool {
         self.0.nullable
     }
+}
+
+/// Displays a list of fields in a table view with their types.
+///
+/// Args:
+///     fields (list[baskerville.Field]): List of :class:`Field` s.
+#[pyfunction]
+pub fn display_fields(fields: Vec<&PyAny>) -> PyResult<String> {
+    let fields: PyResult<Vec<Field>> = fields
+        .clone()
+        .into_iter()
+        .map(|field| Ok(PyField::into(field.extract()?)))
+        .collect();
+    Ok(format!("{}", Fields(fields?)))
 }

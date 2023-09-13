@@ -1,4 +1,4 @@
-use field::PyField;
+use field::{display_fields, PyField};
 use validators::{
     PyDate, PyDateTime, PyDateTimeFormat, PyEmpty, PyFloat, PyInteger, PyLiteral, PyText, PyTime,
     PyUnique,
@@ -15,6 +15,7 @@ use pyo3::prelude::*;
 #[pyo3(name = "baskerville")]
 fn baskerville_py(_py: Python, m: &PyModule) -> PyResult<()> {
     m.add_function(wrap_pyfunction!(infer_csv_py, m)?)?;
+    m.add_function(wrap_pyfunction!(display_fields, m)?)?;
     m.add_class::<PyField>()?;
     m.add_class::<PyEmpty>()?;
     m.add_class::<PyText>()?;

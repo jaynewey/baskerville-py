@@ -2,6 +2,31 @@
 
 
 
+## v0.2.0 (2023-09-14)
+
+### Chore
+
+* chore: update `baskerville` to 0.2.0 ([`f3e9c5c`](https://github.com/jaynewey/baskerville-py/commit/f3e9c5c159a667143166044f4bf5e2dba8f38de0))
+
+### Ci
+
+* ci: run doc tests ([`fa1c0e8`](https://github.com/jaynewey/baskerville-py/commit/fa1c0e8ad8dea4f05e6a8c16eafce35533b6812f))
+
+* ci: check docs build on `devel` branch and pull requests ([`abaac98`](https://github.com/jaynewey/baskerville-py/commit/abaac98cce4375009d038bc8e433b6af481d19b5))
+
+* ci: always checkout tag made by PSR ([`62593af`](https://github.com/jaynewey/baskerville-py/commit/62593af6f95126a6d74712240767fa3a902a5a79))
+
+### Documentation
+
+* docs: use `display_fields` in examples ([`83952f5`](https://github.com/jaynewey/baskerville-py/commit/83952f51b4ceec2a524ef779be1253f4cd737eca))
+
+* docs: link to py repo ([`10caf5b`](https://github.com/jaynewey/baskerville-py/commit/10caf5bd03f6c45434beaa144e9c9c02c1416398))
+
+### Feature
+
+* feat: add `display_fields` function ([`6a35f81`](https://github.com/jaynewey/baskerville-py/commit/6a35f81e9c9f137713b60b760c9226d69adae48c))
+
+
 ## v0.1.0 (2023-09-07)
 
 ### Breaking

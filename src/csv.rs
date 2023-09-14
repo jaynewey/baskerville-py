@@ -41,8 +41,17 @@ fn as_byte(value: &str) -> PyResult<u8> {
 ///             Ferris,42,Crab
 ///             Corro,7,Urchin
 ///
-///     >>> baskerville.infer_csv("mascots.csv") # doctest: +SKIP
-///     [Field(name=Name, valid_types=[Text(min_length=5, max_length=6)], nullable=False), Field(name=LOC, valid_types=[Integer(min_value=7, max_value=42), Float(min_value=7, max_value=42), Text(min_length=1, max_length=2)], nullable=False), Field(name=Species, valid_types=[Text(min_length=4, max_length=6)], nullable=False)]
+///     # doctest: +SKIP
+///     >>> import baskerville
+///     >>> fields = baskerville.infer_csv("mascots.csv") 
+///     >>> print(baskerville.display_fields(fields))
+///     ╭──────┬─────────┬─────────╮
+///     │ Name │ LOC     │ Species │
+///     ├──────┼─────────┼─────────┤
+///     │ Text │ Integer │ Text    │
+///     │      │ Float   │         │
+///     │      │ Text    │         │
+///     ╰──────┴─────────┴─────────╯
 #[pyfunction]
 #[pyo3(
     name = "infer_csv",
